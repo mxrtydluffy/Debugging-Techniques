@@ -34,3 +34,10 @@ You will need to submit `debug_log.md` to Gradescope as your homework.
 
 ### Main Repo
 Main repo [link](https://github.com/Make-School-Labs/SPD-2.3-Debugging-Techniques-Lab)
+
+#### Choose and apply a technique
+* Trace Backward: If there is a specific line number causing the error
+* Trace Forward: If you aren't sure which line is causing the error
+* Divide and Conquer: If there are multiple areas which may have caused the error
+
+- It's ok to change your mind or use more than one strategy!
