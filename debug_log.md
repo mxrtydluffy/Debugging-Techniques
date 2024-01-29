@@ -30,7 +30,14 @@ _Then I noticed another bug ..._
 
 ## Exercise 2
 
-[[Your answer goes here!]]
+- Similar to Exercise 1 after I ran the code and the server was running successfully. However after that I got a list of errors. Looking at the app.py I decided to *trace forward* because I wasn't sure which line was causing the error. Going over the first route I found an error in the `/results` route
+    - The request arguments are getting `users_city` and `requested_units` but should of been just `city` and `units`.
+- After that continuing to the paramas and seeing if it correct relates back to the result json file. There is where I had an ah ha moment
+    - Even though the params are correct the result json needs to be called.
+- Lastly I went to to the context dictonary and found that the temp value needs to have the same result. Therefore it can't be `temperature` but `temp`.
+- Here I thought I was done but unfortunately I kept on getting `KeyError: 'name'` in results `'city': result_json['name']`
+    - I then figured out the paramenter key value was `place`. I changed the `place` to `q` inorder to have the correct API place value. After that it began to show. Once I thought I noticed an html typo in the home.html page. I changed the end h1 to h2.
+- Finally everything was working
 
 ## Exercise 3
 
