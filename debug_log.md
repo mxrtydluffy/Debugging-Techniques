@@ -41,4 +41,10 @@ _Then I noticed another bug ..._
 
 ## Exercise 3
 
-[[Your answer goes here!]]
+- When running main.py I'm getting an IndexError: list idex out of range. Heading into the main.py file I see the majority of the code is in utils.py where I headed there.
+- I used *trace backward* since I knew there would be a slight error in the merge_sort function. Seeing that the initial values were being declared proved to me that the code after that needed more indepth checking. The first error I found was in the while loop.
+    - Since the while loop copies the data to the temporary left and right arrays, I noticed since the while loop is comparing if `i` is less than the length of the left side and the same goes to `j`, the temporary arrays of `i` and `j` need to  be less than inorder to not be off bounds.
+    - Continuing down to see if any element was left, both while loops of `i` and `k` need to be increased by 1 inorder to check the array values of both left and right sides.
+- On the last function I knew I still continued to use *trace backwards* since this was the last function I didn't check.
+    - When the low and high variables were declared and eventaully seeing the mid has a value of 0, I knew it had to be removed.
+    - Since we're searching for the binray search with the parameters of the arry and element, the while loop needs to be iterating when the low value is less than and equal to high because it needs to return the index. If it's not less than or equal to we would be looking for a different value. Lastly since we're getting the mid values we need to get the average floor division of the high and low in order to be specific as much as possible. Other than that I recieved no errors and didn't need to use *Divide and Conquer* to check for multiple errors.
